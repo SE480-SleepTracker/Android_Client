@@ -19,4 +19,5 @@
     <string name="shelf_thoughts">Thoughts</string>
     <string name="shelf_emotions">Emotions</string>
     <string name="shelf_home">Home</string>
+    <string name="action_create_new_sleep_log">New</string>
 </resources>

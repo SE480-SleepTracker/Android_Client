@@ -23,7 +23,8 @@ import com.superflousjazzhands.sleeptracker.fragments.TipsFragment;
 
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks,
+        SleepLogFragment.OnSleepLogSelectedListener {
 
 
 
@@ -60,7 +61,8 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         Fragment fragment;
-        switch (position+1){
+        position = position + 1;
+        switch (position){
             case 1:
                 fragment = new HomeFragment();
                 break;
@@ -83,7 +85,6 @@ public class MainActivity extends ActionBarActivity
                 fragment = PlaceholderFragment.newInstance(position);
                 break;
         }
-
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -145,6 +146,11 @@ public class MainActivity extends ActionBarActivity
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onSleepLogSelected() {
+
     }
 
     /**
